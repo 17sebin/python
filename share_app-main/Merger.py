@@ -23,7 +23,7 @@ class Criminal:
 
         self.payload={}
         self.headers = {
-            "x-api-key": "<YOUR Criminal API KEY>"
+            "x-api-key": "bJnrTiUa9EzhOQWVHZXAP5bvCfkHa7CcRDISfQbAm5J54mvi44GMkXcjtkYH"
         }
     def get_criminal_info(self):
         response = requests.request("GET", self.url, headers=self.headers, data=self.payload)
@@ -86,7 +86,7 @@ class File:
         self.file.save(self.temp_file_path)
         self.df = pd.read_excel(self.temp_file_path)
         if self.find_email():
-            mail = Mail("hanmin9981@naver.com")
+            mail = Mail("tpqls0711@naver.com")
             mail.mail_text_sender(self.temp_file_path, "\n email 포함된 파일이 업로드 되었습니다.")
         return self.df
 
@@ -416,7 +416,7 @@ if __name__ == "__main__":
 
 
 
-    received_email = "<본인 네이버 이메일 기입>@naver.com"
+    received_email = "tpqls0711@naver.com"
     path = 'uploads'
     MT = Monitering(path,received_email)
     MT.inspect_annotation("#")
